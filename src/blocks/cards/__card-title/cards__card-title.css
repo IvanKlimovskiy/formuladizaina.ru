@@ -4,3 +4,11 @@
   line-height: 1;
   text-transform: uppercase;
 }
+
+@media (max-width: 935px) {
+  .cards__card-title {
+    font-size: 22px;
+  }
+}
+
+

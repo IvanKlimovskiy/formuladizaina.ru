@@ -1,5 +1,5 @@
 .standards__title-wrapper {
-margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .standards__title-wrapper::after {
@@ -12,4 +12,10 @@ margin-bottom: 1em;
   content: '';
   outline: 1px solid darkgrey;
   background: darkgrey;
+}
+
+@media (max-width: 599px) {
+  .standards__title-wrapper {
+    text-align: center;
+  }
 }

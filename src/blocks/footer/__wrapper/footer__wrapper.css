@@ -8,3 +8,9 @@
   padding-right: 15px;
   box-sizing: border-box;
 }
+
+@media (max-width: 580px) {
+  .footer__wrapper {
+    display: block;
+  }
+}

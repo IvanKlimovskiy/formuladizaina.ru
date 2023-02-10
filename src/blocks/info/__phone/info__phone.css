@@ -16,3 +16,9 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+@media (max-width: 786px) {
+  .info__phone {
+    margin: 0.5em 0;
+  }
+}

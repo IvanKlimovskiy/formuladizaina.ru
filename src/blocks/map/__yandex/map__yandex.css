@@ -1,0 +1,11 @@
+.map__yandex {
+  border-right: 4px solid rgba(0, 0, 0, .8);
+}
+
+@media (max-width: 912px) {
+  .map__yandex {
+    width: 100%;
+    border-right: none;
+    border-bottom: 8px solid rgba(0, 0, 0, .8);
+  }
+}

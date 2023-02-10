@@ -5,3 +5,15 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media (max-width: 1040px) {
+  .nav-menu__list {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-menu__list {
+    display: none;
+  }
+}

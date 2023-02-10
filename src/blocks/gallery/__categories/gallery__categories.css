@@ -5,3 +5,10 @@
   justify-content: space-between;
   list-style-type: none;
 }
+
+@media (max-width: 435px) {
+  .gallery__categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

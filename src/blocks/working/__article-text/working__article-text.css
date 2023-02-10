@@ -2,3 +2,9 @@
   margin-top: 0.5em;
   font-size: 19px ;
 }
+
+@media (max-width: 599px) {
+  .working__article-text {
+    font-size: 16px;
+  }
+}

@@ -11,6 +11,19 @@
   transition: all 0.2s ease-in-out;
   text-decoration: none;
 }
+
 .gallery__category-link:hover {
   background-color: #d58f0a;
+}
+
+@media (max-width: 899px) {
+  .gallery__category-link {
+    padding: 1px 25px;
+  }
+}
+
+@media (max-width: 599px) {
+  .gallery__category-link {
+    padding: 0 15px;
+  }
 }

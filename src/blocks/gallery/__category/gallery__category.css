@@ -5,6 +5,21 @@
   border-radius: 22px;
   transition: all 0.2s ease-in-out;
 }
-.gallery__category-link {
 
+@media (max-width: 899px) {
+  .gallery__category {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 599px) {
+  .gallery__category {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 435px) {
+  .gallery__category {
+    margin: auto;
+  }
 }

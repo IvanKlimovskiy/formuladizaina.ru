@@ -20,18 +20,21 @@
       <span class="nav-menu__logo-description">мебель на заказ в Санкт-Петербурге</span>
     </div>
     <ul class="nav-menu__list">
-      <li class="nav-menu__item"><a href="#" class="nav-menu__item-link">Примеры</a></li>
-      <li class="nav-menu__item"><a href="#" class="nav-menu__item-link">Отзывы</a></li>
-      <li class="nav-menu__item"><a href="#" class="nav-menu__item-link">О Производстве</a></li>
-      <li class="nav-menu__item"><a href="#" class="nav-menu__item-link">Оплата</a></li>
-      <li class="nav-menu__item"><a href="#" class="nav-menu__item-link">Контакты</a></li>
+      <li class="nav-menu__item"><a href="#examples" class="nav-menu__item-link">Примеры</a></li>
+      <li class="nav-menu__item"><a href="#feedback" class="nav-menu__item-link">Отзывы</a></li>
+      <li class="nav-menu__item"><a href="#our-production" class="nav-menu__item-link">О Производстве</a></li>
+      <li class="nav-menu__item"><a href="#payment" class="nav-menu__item-link">Оплата</a></li>
+      <li class="nav-menu__item"><a href="#contacts" class="nav-menu__item-link">Контакты</a></li>
     </ul>
-    <div class="nav-menu__phone">
-      <a href="tel:+78129860202" class="nav-menu__phone-link">
-        <span class="nav-menu__phone-code">+7 (812)</span>
-        <span class="nav-menu__phone-nums">986-02-02</span>
-      </a>
-      <span class="nav-menu__phone-time">Пн-Вс 10:00 - 20:00</span>
+    <div class="nav-menu__burger-menu-wrapper">
+      <div class="nav-menu__phone">
+        <a href="tel:+78129860202" class="nav-menu__phone-link">
+          <span class="nav-menu__phone-code">+7 (812)</span>
+          <span class="nav-menu__phone-nums">986-02-02</span>
+        </a>
+        <span class="nav-menu__phone-time">Пн-Вс 10:00 - 20:00</span>
+      </div>
+      <button class="nav-menu__burger-menu"></button>
     </div>
   </nav>
   <div class="header__promo">
@@ -116,7 +119,7 @@
         </a>
       </ul>
     </div>
-    <div class="gallery__main">
+    <div id="examples" class="gallery__main">
       <div id="cabinets" class="gallery__main-item">
         <img class="gallery__image" src="<%=require('./images/cabinets/ApkMJBys5nA.jpg')%>" alt="">
       </div>
@@ -218,12 +221,11 @@
     </div>
     <button class="button standards__button">Заказать мебель</button>
   </section>
-  <section class="designer contract">
+  <section id="payment" class="designer contract">
     <div class="designer__wrapper">
       <div class="designer__info">
-        <h2 class="designer__title">Работаем по 54-ФЗ <b class="designer__title_type_span"
-                                                         style="font-size: 25px; font-weight: 400;text-transform: none; margin: 20px 0 25px">Заключая
-          с нами договор Вы получаете:</b></h2>
+        <h2 class="designer__title">Работаем по 54-ФЗ
+          <b class="designer__title_type_span contract__title_type_span">Заключая с нами договор Вы получаете:</b></h2>
         <ul class="designer__list">
           <li class="designer__item contract__item"><b style="color:#c48408">1&nbsp;</b>Кассовый чек.</li>
           <li class="designer__item contract__item"><b style="color:#c48408">2&nbsp;</b>Возможность оплатить покупку
@@ -253,47 +255,49 @@
     </div>
   </section>
   <section class="advantages working">
-    <div style="display: flex;align-items: center;justify-content: start">
-      <h2 class="working__title">Как мы работаем</h2>
+    <div class="advantages__items">
+      <div class="working__title-wrapper">
+        <h2 class="working__title">Как мы работаем</h2>
+      </div>
+      <article class="advantages__item">
+        <h3 class="working__article-title">5</h3>
+        <p class="working__article-subtitle">Дней</p>
+        <p class="working__article-text">Замер, прорисовка изделий, подписание договора</p>
+      </article>
+      <article class="advantages__item">
+        <h3 class="working__article-title">5</h3>
+        <p class="working__article-subtitle">Недель</p>
+        <p class="working__article-text">Изготовление мебели, доставка, установка</p>
+      </article>
+      <article class="advantages__item">
+        <h3 class="working__article-title">5</h3>
+        <p class="working__article-subtitle">Лет</p>
+        <p class="working__article-text">Гарантия на всю нашу мебель</p>
+      </article>
     </div>
-    <article class="advantages__item">
-      <h3 class="working__article-title">5</h3>
-      <p class="working__article-subtitle">Дней</p>
-      <p class="working__article-text">Замер, прорисовка изделий, подписание договора</p>
-    </article>
-    <article class="advantages__item">
-      <h3 class="working__article-title">5</h3>
-      <p class="working__article-subtitle">Недель</p>
-      <p class="working__article-text">Изготовление мебели, доставка, установка</p>
-    </article>
-    <article class="advantages__item">
-      <h3 class="working__article-title">5</h3>
-      <p class="working__article-subtitle">Лет</p>
-      <p class="working__article-text">Гарантия на всю нашу мебель</p>
-    </article>
   </section>
-  <section class="our-production">
-    <h2 class="our-production__title">Наше производство</h2>
+  <section id="our-production" class="our-production">
+    <h2 class="our-production__title">Наше производство и шоу-рум</h2>
     <p class="our-production__subtitle">Санкт-Петербург, Выборгское шоссе 369/6, ТЦ Паргос.</p>
     <img class="our-production__slider" src="<%=require('./images/34.jpg')%>" alt="">
   </section>
-  <section class="advantages">
-    <div class="advantages__items">
+
+  <section id="feedback" class="advantages feedback">
+    <h2 class="feedback__title">Отзывы с <span style="color: red">Я</span>ндекс <span style="font-weight: 400;">Карты</span></h2>
+    <div class="advantages__items feedback__items">
       <article class="advantages__item">
-        <h2 class="advantages__title advantages__title_icon_tools">Экономно</h2>
-        <p class="advantages__subtitle">Вы покупаете напрямую у производителя</p>
+        <h3 class="advantages__title feedback__image">Дима Ларю</h3>
+        <p class="advantages__subtitle">Все хорошо, отличная компания. Цены приемлемые. Сроки немного великоваты, но
+          зато делают все до конца и не пропадают. Всегда на связи</p>
       </article>
       <article class="advantages__item">
-        <h2 class="advantages__title advantages__title_icon_materials">Индивидуально</h2>
-        <p class="advantages__subtitle">Любые цвета, фактуры, материалы и размеры</p>
+        <h3 class="advantages__title feedback__image">Dima xxxxxxx</h3>
+        <p class="advantages__subtitle">Декоративная отделка, лепка и мебель - все это на заказ и по приемлемым ценам.
+          Желаю процветания в бизнесе!!!!</p>
       </article>
       <article class="advantages__item">
-        <h2 class="advantages__title advantages__title_icon_money">Удобно</h2>
-        <p class="advantages__subtitle">Принимаем к оплате карты VISA, MasterCard, МИР</p>
-      </article>
-      <article class="advantages__item">
-        <h2 class="advantages__title advantages__title_icon_contract">Надежно</h2>
-        <p class="advantages__subtitle">На всю нашу продукцию действует гарантия 5 лет</p>
+        <h3 class="advantages__title feedback__image">Руся Катульский</h3>
+        <p class="advantages__subtitle">Просто посмотрите как качественно делают мебель!</p>
       </article>
     </div>
   </section>
@@ -324,7 +328,7 @@
       </div>
     </div>
   </section>
-  <section class="info">
+  <section id="contacts" class="info">
     <div class="info__wrapper">
       <div class="info__contacts">
         <a href="#" class="info__phone">+7 (812) 986-02-02</a>
@@ -334,9 +338,9 @@
     </div>
   </section>
   <section class="map">
-    <iframe
+    <iframe class="map__yandex"
       src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae85f37d0f51706c1c37657f1be5f3b676b68c0f796bd13d4dc538e1815806232&amp;source=constructor"
-      width="50%" height="400px" style="border-right: 4px solid rgba(0,0,0,.8)">
+      width="50%" height="400px">
     </iframe>
     <div class="map__info">
       <div class="map__info-title">Встречи с&nbsp;дизайнером в&nbsp;офисе осуществляются по&nbsp;предварительной записи
@@ -356,10 +360,55 @@
       <p class="footer__subtitle">мебель на заказ в Санкт-Петербурге</p>
     </div>
     <div class="footer__copyright">
-      <div class="footer__copyright-icon">&copy;</div>
       <p class="footer__copyright-text">2018 - 2023 Все права защищены</p>
     </div>
   </div>
 </footer>
+<div class="popup popup_type_form">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <h5 class="popup__title">Заказать мебель</h5>
+      <p class="popup__subtitle">Оставьте ваши контакты и мы перезвоним Вам в течение часа</p>
+      <form method="post" class="form designer__form">
+        <label class="form__label" for="name-popup">
+          <input class="form__input" id="name-popup" type="text" placeholder="Ваше имя">
+        </label>
+        <label class="form__label" for="number-popup">
+          <input class="form__input" id="number-popup" type="text" placeholder="+7 (___) ___-__-__">
+        </label>
+        <div class="form__agreement">
+          <input required="" class="form__agreement-checkbox" type="checkbox" name="agreement" id="formAgreement-popup"
+                 checked="">
+          <label class="form__agreement-label" for="formAgreement-popup"><span>Cогласен на <a
+            class="form__agreement-link"
+            href="./agreement.html">обработку персональных данных.</a></span></label>
+        </div>
+        <button class="form__submit button popup__submit-button">Отправить</button>
+      </form>
+    </div>
+    <button class="popup__close-button"></button>
+  </div>
+</div>
+<div class="popup popup_type_image">
+  <button type="button" aria-label="Закрыть" class="popup__close-button popup__close-button_type_opened-popup"></button>
+  <div class="popup__container">
+    <img class="popup__image" src="" alt="">
+    <h2 class="popup__title"></h2>
+  </div>
+</div>
+<nav class="nav-menu-small">
+  <button class="popup__close-button nav-menu-small__close-button"></button>
+  <div class="nav-menu-small__content">
+    <ul class="nav-menu-small__list">
+      <li class="nav-menu-small__item"><a href="#examples" class="nav-menu-small__item-link">Примеры</a></li>
+      <li><a href="#feedback" class="nav-menu__item-link">Отзывы</a></li>
+      <li class="nav-menu-small__item"><a href="#our-production" class="nav-menu-small__item-link">О Производстве</a>
+      </li>
+      <li class="nav-menu-small__item"><a href="#payment" class="nav-menu-small__item-link">Оплата</a></li>
+      <li class="nav-menu-small__item"><a href="#contacts" class="nav-menu-small__item-link">Контакты</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="nav-menu-small__overlay"></div>
 </body>
 </html>

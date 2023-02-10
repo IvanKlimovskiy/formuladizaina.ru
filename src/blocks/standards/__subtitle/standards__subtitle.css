@@ -5,3 +5,16 @@
   font-size: 25px;
   line-height: 1.2727272727;
 }
+
+@media (max-width: 599px) {
+  .standards__subtitle {
+    font-size: 22px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 479px) {
+  .standards__subtitle {
+    font-size: 19px;
+  }
+}

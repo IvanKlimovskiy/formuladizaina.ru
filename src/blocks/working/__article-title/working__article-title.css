@@ -3,3 +3,9 @@
   font-weight: 900;
   color: #c48408;
 }
+
+@media (max-width: 599px) {
+  .working__article-title {
+    font-size: 29px;
+  }
+}

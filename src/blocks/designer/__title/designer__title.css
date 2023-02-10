@@ -14,3 +14,29 @@
   outline: 1px solid darkgrey;
   background: darkgrey;
 }
+
+@media (max-width: 599px) {
+  .designer__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 26px;
+  }
+}
+@media (max-width: 599px) {
+  .designer__title::after {
+    margin-right: 0;
+  }
+}
+@media (max-width: 479px) {
+  .designer__title {
+    text-align: center;
+    font-size: 22px;
+    display: block;
+  }
+}
+@media (max-width: 479px) {
+  .designer__title::after {
+    margin: 0.7em auto 0;
+  }
+}

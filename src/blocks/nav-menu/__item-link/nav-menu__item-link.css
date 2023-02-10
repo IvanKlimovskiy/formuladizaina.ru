@@ -15,3 +15,8 @@
 .nav-menu__item-link:hover::after {
   width: 100%;
 }
+@media (max-width: 1040px) {
+  .nav-menu__item-link {
+    font-size: 13px;
+  }
+}

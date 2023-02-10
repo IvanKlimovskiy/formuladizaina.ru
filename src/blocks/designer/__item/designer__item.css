@@ -17,3 +17,17 @@
   color: #ffffff;
   content: '+';
 }
+@media (max-width: 599px) {
+  .designer__item {
+    padding-left: 22px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 599px) {
+  .designer__item::before {
+    font-size: 22px;
+    line-height: 0.7;
+    left: 0;
+    top: 0;
+  }
+}

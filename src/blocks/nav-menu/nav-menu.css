@@ -1,9 +1,16 @@
 .nav-menu {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1130px;
   width: 100%;
   margin: auto;
-  padding: 50px 0 15px;
+  padding: 50px 15px 15px;
+}
+
+@media (max-width: 476px) {
+  .nav-menu {
+    flex-direction: column;
+  }
 }
