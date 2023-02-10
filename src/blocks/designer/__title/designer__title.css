@@ -1,0 +1,16 @@
+.designer__title {
+  font-size: 33px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.designer__title::after {
+  display: block;
+  width: 150px;
+  height: 1px;
+  margin-top: .7em;
+  margin-right: auto;
+  content: '';
+  outline: 1px solid darkgrey;
+  background: darkgrey;
+}

@@ -1,0 +1,7 @@
+.nav-menu__list {
+  list-style-type: none;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+}

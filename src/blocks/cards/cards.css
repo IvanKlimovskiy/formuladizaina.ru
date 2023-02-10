@@ -1,0 +1,9 @@
+.cards {
+  margin-top: 57px;
+  margin-bottom: 33px;
+  display: grid;
+  row-gap: 33px;
+  column-gap: 15px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}

@@ -1,0 +1,10 @@
+.designer__wrapper {
+  width: 50%;
+  height: 100%;
+  min-width: 599px;
+  margin-left: auto;
+  padding: 37px 45px;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}

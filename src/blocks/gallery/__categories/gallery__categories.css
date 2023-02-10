@@ -1,0 +1,7 @@
+.gallery__categories {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  justify-content: space-between;
+  list-style-type: none;
+}

@@ -1,0 +1,15 @@
+.button {
+  cursor: pointer;
+  font-family: "OfficinaSans", sans-serif;
+  background-color: #c48408;
+  color: white;
+  margin-top: 2em;
+  text-transform: uppercase;
+  border: none;
+  padding: 4px 14px;
+  border-radius: 28px;
+}
+
+.button:hover {
+  background-color: #d58f0a;
+}

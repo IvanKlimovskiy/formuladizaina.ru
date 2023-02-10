@@ -1,0 +1,14 @@
+@font-face {
+  src: url(../fonts/OfficinaSans-Book.woff) format('woff'),
+  url(../fonts/OfficinaSans-Book.ttf) format('ttf'),
+  url(../fonts/OfficinaSans-Book.eot) format('eot');
+  font-family: 'OfficinaSans';
+  font-weight: 400;
+}
+@font-face {
+  src: url(../fonts/OfficinaSans-Black.woff) format('woff'),
+  url(../fonts/OfficinaSans-Black.ttf) format('ttf'),
+  url(../fonts/OfficinaSans-Black.eot) format('eot');
+  font-family: 'OfficinaSans';
+  font-weight: 900;
+}

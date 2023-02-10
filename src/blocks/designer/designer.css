@@ -1,0 +1,10 @@
+.designer {
+  background-image: url("../../images/design.jpg");
+  height: 700px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 2em;
+  position: relative;
+  width: 100%;
+}

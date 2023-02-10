@@ -1,0 +1,10 @@
+.gallery__category {
+  color: white;
+  font-size: 22px;
+  line-height: 1;
+  border-radius: 22px;
+  transition: all 0.2s ease-in-out;
+}
+.gallery__category-link {
+
+}

@@ -1,0 +1,19 @@
+.designer__item {
+  position: relative;
+  margin: .5em 0;
+  padding-left: 30px;
+  font-size: 22px;
+  color: #c48408;
+  text-transform: uppercase;
+}
+
+.designer__item::before {
+  position: absolute;
+  left: 5px;
+  top: -3px;
+  font-size: 33px;
+  font-weight: 900;
+  line-height: 1;
+  color: #ffffff;
+  content: '+';
+}
