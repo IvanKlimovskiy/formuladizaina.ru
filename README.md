@@ -9,4 +9,3 @@
 2. CSS
 3. JS
 
-Сслыка на проект на Github: https://ivanklimovskiy.github.io/furniture-project/
