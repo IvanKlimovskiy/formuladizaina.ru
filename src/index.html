@@ -276,14 +276,27 @@
       </article>
     </div>
   </section>
+
   <section id="our-production" class="our-production">
     <h2 class="our-production__title">Наше производство и шоу-рум</h2>
     <p class="our-production__subtitle">Санкт-Петербург, Выборгское шоссе 369/6, ТЦ Паргос.</p>
-    <img class="our-production__slider" src="<%=require('./images/34.jpg')%>" alt="">
+    <div class="our-production__wrapper">
+      <button class="our-production__slider-button our-production__slider-button_type_prev"></button>
+      <div class="our-production__slider">
+        <div class="our-production__slider-wrapper">
+          <img class="our-production__slider-image" src="<%=require('./images/34.jpg')%>" alt="">
+          <img class="our-production__slider-image" src="<%=require('./images/b7l.jpg')%>" alt="">
+          <img class="our-production__slider-image" src="<%=require('./images/GoqRspzV4QQ.jpg')%>" alt="">
+          <img class="our-production__slider-image" src="<%=require('./images/3JLZewfVfZk.jpg')%>" alt="">
+        </div>
+      </div>
+      <button class="our-production__slider-button our-production__slider-button_type_next"></button>
+    </div>
   </section>
 
   <section id="feedback" class="advantages feedback">
-    <h2 class="feedback__title">Отзывы с <span style="color: red">Я</span>ндекс <span style="font-weight: 400;">Карты</span></h2>
+    <h2 class="feedback__title">Отзывы с <span style="color: red">Я</span>ндекс <span
+      style="font-weight: 400;">Карты</span></h2>
     <div class="advantages__items feedback__items">
       <article class="advantages__item">
         <h3 class="advantages__title feedback__image">Дима Ларю</h3>
@@ -339,8 +352,8 @@
   </section>
   <section class="map">
     <iframe class="map__yandex"
-      src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae85f37d0f51706c1c37657f1be5f3b676b68c0f796bd13d4dc538e1815806232&amp;source=constructor"
-      width="50%" height="400px">
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae85f37d0f51706c1c37657f1be5f3b676b68c0f796bd13d4dc538e1815806232&amp;source=constructor"
+            width="50%" height="400px">
     </iframe>
     <div class="map__info">
       <div class="map__info-title">Встречи с&nbsp;дизайнером в&nbsp;офисе осуществляются по&nbsp;предварительной записи
@@ -401,7 +414,7 @@
   <div class="nav-menu-small__content">
     <ul class="nav-menu-small__list">
       <li class="nav-menu-small__item"><a href="#examples" class="nav-menu-small__item-link">Примеры</a></li>
-      <li><a href="#feedback" class="nav-menu__item-link">Отзывы</a></li>
+      <li class="nav-menu-small__item"><a href="#feedback" class="nav-menu-small__item-link">Отзывы</a></li>
       <li class="nav-menu-small__item"><a href="#our-production" class="nav-menu-small__item-link">О Производстве</a>
       </li>
       <li class="nav-menu-small__item"><a href="#payment" class="nav-menu-small__item-link">Оплата</a></li>

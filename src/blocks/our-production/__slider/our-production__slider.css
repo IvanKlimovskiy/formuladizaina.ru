@@ -1,5 +1,8 @@
 .our-production__slider {
-  margin: 2em 0 4em;
-  width: 800px;
-  display: block;
+  display: flex;
+  margin: 2em auto;
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
 }
+

@@ -90,6 +90,12 @@
 @import "../blocks/our-production/__title/our-production__title.css";
 @import "../blocks/our-production/__subtitle/our-production__subtitle.css";
 @import "../blocks/our-production/__slider/our-production__slider.css";
+@import "../blocks/our-production/__slider-wrapper/our-production__slider-wrapper.css";
+@import "../blocks/our-production/__slider-image/our-production__slider-image.css";
+@import "../blocks/our-production/__slider-button/our-production__slider-button.css";
+@import "../blocks/our-production/__slider-button/_type/our-production__slider-button_type_next.css";
+@import "../blocks/our-production/__slider-button/_type/our-production__slider-button_type_prev.css";
+@import "../blocks/our-production/__wrapper/our-production__wrapper.css";
 @import "../blocks/feedback/__image/feedback__image.css";
 @import "../blocks/feedback/__items/feedback__items.css";
 @import "../blocks/feedback/__title/feedback__title.css";

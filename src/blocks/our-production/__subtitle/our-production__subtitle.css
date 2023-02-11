@@ -14,3 +14,17 @@
   outline: 1px solid darkgrey;
   background: darkgrey;
 }
+
+@media (max-width: 479px) {
+  .our-production__subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 399px) {
+  .our-production__subtitle {
+    font-size: 16px;
+    max-width: 250px;
+    text-align: center;
+  }
+}
