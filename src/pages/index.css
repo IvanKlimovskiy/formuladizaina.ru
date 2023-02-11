@@ -96,9 +96,10 @@
 @import "../blocks/our-production/__slider-button/_type/our-production__slider-button_type_next.css";
 @import "../blocks/our-production/__slider-button/_type/our-production__slider-button_type_prev.css";
 @import "../blocks/our-production/__wrapper/our-production__wrapper.css";
-@import "../blocks/feedback/__image/feedback__image.css";
-@import "../blocks/feedback/__items/feedback__items.css";
-@import "../blocks/feedback/__title/feedback__title.css";
+@import "../blocks/cooperation/__image/cooperation__image.css";
+@import "../blocks/cooperation/__title/cooperation__title.css";
+@import "../blocks/cooperation/__labels/cooperation__labels.css";
+@import "../blocks/cooperation/__label/cooperation__label.css";
 @import "../blocks/questions/questions.css";
 @import "../blocks/questions/__info/questions__info.css";
 @import "../blocks/info/info.css";
@@ -120,6 +121,7 @@
 @import "../blocks/footer/__title/footer__title.css";
 @import "../blocks/footer/__copyright-icon/footer__copyright-icon.css";
 @import "../blocks/footer/__copyright-text/footer__copyright-text.css";
+@import "../blocks/footer/__social-icon/footer__social-icon.css";
 @import "../blocks/popup/popup.css";
 @import "../blocks/popup/__close-button/popup__close-button.css";
 @import "../blocks/popup/__close-button/_type/popup__close-button_type_opened-popup.css";
