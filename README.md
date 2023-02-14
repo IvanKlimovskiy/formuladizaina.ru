@@ -9,5 +9,6 @@
 2. CSS
 3. JS
 4. Webpack
+5. PHP
 
 Страница в интернете: https://formuladizaina.ru/
