@@ -6,7 +6,7 @@
   }
 }
 
-@media (max-width: 468px) {
+@media (max-width: 644px) {
   .footer__logo {
     flex-direction: column;
   }

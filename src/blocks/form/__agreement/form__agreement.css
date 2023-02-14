@@ -7,3 +7,9 @@
     font-size: 13px;
   }
 }
+
+@media (max-width: 369px) {
+  .form__agreement {
+    font-size: 11px;
+  }
+}

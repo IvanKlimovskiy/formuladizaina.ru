@@ -1,5 +1,6 @@
 .footer__wrapper {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   max-width: 1130px;
   margin-left: auto;
@@ -9,8 +10,8 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 644px) {
   .footer__wrapper {
-    display: block;
+    flex-direction: column;
   }
 }
