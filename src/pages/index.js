@@ -22,18 +22,25 @@ import {
   popupConfirmSentForm,
   subtitleSendFormConfirmation,
   forms,
-  agreementCheckboxes, smallMenuLinks,
-} from "../components/variables"
-import {closePopup, closeSmallMenu, openPopup, openSmallMenu} from "../components/modal";
+  agreementCheckboxes,
+  smallMenuLinks,
+  slidesNumber,
+} from "../components/variables";
+import {
+  closePopup,
+  closeSmallMenu,
+  openPopup,
+  openSmallMenu,
+} from "../components/modal";
 import {
   activateSubmitButton,
   deactivateSubmitButton,
   enableValidation,
   hasInvalidInputs,
-  toggleButtonSendingData
-} from "../components/validation"
+  toggleButtonSendingData,
+} from "../components/validation";
 import maskPhone from "../components/mask";
-import {unlockScroll} from "../components/utils";
+import { unlockScroll } from "../components/utils";
 
 export const settings = {
   formElement: ".form",
@@ -44,113 +51,139 @@ export const settings = {
   errorClass: ".form__input-error",
 };
 
-//Слушатели на бургер меню
+//Слушатель на бургер меню
 burgerMenuButton.addEventListener("click", openSmallMenu);
 buttonCloseSmallNavMenu.addEventListener("click", closeSmallMenu);
 smallMenuOverlay.addEventListener("click", (evt) => {
   if (evt.target.classList.contains("nav-menu-small__overlay")) {
-    closeSmallMenu()
+    closeSmallMenu();
   }
-})
+});
 
+// Слушатель на все кнопки открытия попапа и замены текста заголовка
 buttonsOpenForm.forEach((button) => {
   button.addEventListener("click", () => {
     popupTitle.textContent = button.textContent;
-    openPopup(popupWithForm)
-  })
-})
+    openPopup(popupWithForm);
+  });
+});
+
+// Слушатели для иконки мессенджера и оверлея
 messengerLinks.forEach((messengerLink) => {
   messengerLink.addEventListener("click", () => {
-    chatLinks.classList.remove('messenger__links_active');
+    chatLinks.classList.remove("messenger__links_active");
     overlay.style.display = "none";
-  })
-})
-document.addEventListener('click', function (evt) {
-  if (evt.target.id === 'overlay') {
-    chatLinks.classList.remove('messenger__links_active');
+  });
+});
+document.addEventListener("click", function (evt) {
+  if (evt.target.id === "overlay") {
+    chatLinks.classList.remove("messenger__links_active");
     overlay.style.display = "none";
   }
   if (evt.target === chatButton) {
-    chatLinks.classList.toggle('messenger__links_active');
+    chatLinks.classList.toggle("messenger__links_active");
     overlay.style.display = "block";
   }
-})
+});
+
+// Слушатель на открытия попапа с картинкой
 galleryPhotoElements.forEach((element) => {
   element.addEventListener("click", (evt) => {
-    openPopup(popupWithImage)
+    openPopup(popupWithImage);
     popupOpenedImage.src = evt.target.src;
-  })
-})
+    popupOpenedImage.alt = evt.target.alt;
+  });
+});
 
+// Слайдер
 let slideWidthCounter = 0;
 nextSlide.addEventListener("click", () => {
+  nextSlide.disabled = true;
   slideWidthCounter += slideWidth;
-  sliderWrapper.style.transform = `translateX(-${slideWidthCounter}px)`
-  if (slideWidthCounter === (slideWidth * 4)) {
-    sliderWrapper.style.transform = `translateX(0)`
-    slideWidthCounter = 0
+  sliderWrapper.style.transform = `translateX(-${slideWidthCounter}px)`;
+  if (slideWidthCounter === slideWidth * slidesNumber) {
+    sliderWrapper.style.transform = `translateX(0)`;
+    slideWidthCounter = 0;
   }
-})
+  setTimeout(() => {
+    nextSlide.disabled = false;
+  }, 1000);
+});
 
 prevSlide.addEventListener("click", () => {
+  prevSlide.disabled = true;
   slideWidthCounter -= slideWidth;
-  sliderWrapper.style.transform = `translateX(-${slideWidthCounter}px)`
+  sliderWrapper.style.transform = `translateX(-${slideWidthCounter}px)`;
   if (slideWidthCounter === -slideWidth) {
-    sliderWrapper.style.transform = `translateX(-${slideWidth * 3}px)`
-    slideWidthCounter = slideWidth * 3
+    sliderWrapper.style.transform = `translateX(-${
+      slideWidth * (slidesNumber - 1)
+    }px)`;
+    slideWidthCounter = slideWidth * (slidesNumber - 1);
   }
-})
+  setTimeout(() => {
+    prevSlide.disabled = false;
+  }, 1000);
+});
 
 buttonConfirmation.addEventListener("click", () => {
-  closePopup(popupConfirmSentForm)
-})
+  closePopup(popupConfirmSentForm);
+});
 
 forms.forEach((form) => {
   form.addEventListener("submit", (evt) => {
     evt.preventDefault();
-    toggleButtonSendingData(false, evt)
+    toggleButtonSendingData(false, evt);
     const formData = new FormData(form);
-    fetch("sendmail.php", {method: "POST", body: formData,}).then((response) => {
-      if (response.ok) {
-        return response.json();
-      } else {
-        return Promise.reject(`Ошибка:${response.status}`);
-      }
-    }).then((response) => {
-      openPopup(popupConfirmSentForm)
-      subtitleSendFormConfirmation.textContent = response.message
-    }).catch((error) => {
-      subtitleSendFormConfirmation.textContent = error.message
-    }).finally(() => {
-      toggleButtonSendingData(true, evt)
-      closePopup(popupWithForm)
-    })
-    form.reset()
-    deactivateSubmitButton(form)
+    fetch("sendmail.php", { method: "POST", body: formData })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          return Promise.reject(`Ошибка:${response.status}`);
+        }
+      })
+      .then((response) => {
+        openPopup(popupConfirmSentForm);
+        subtitleSendFormConfirmation.textContent = response.message;
+      })
+      .catch((error) => {
+        subtitleSendFormConfirmation.textContent = error.message;
+      })
+      .finally(() => {
+        toggleButtonSendingData(true, evt);
+        closePopup(popupWithForm);
+      });
+    form.reset();
+    deactivateSubmitButton(form);
   });
-})
+});
 
-enableValidation(settings)
+enableValidation(settings);
 
 agreementCheckboxes.forEach((checkbox) => {
   checkbox.addEventListener("change", (evt) => {
     const closestForm = evt.target.closest(".form");
-    const agreementCheckbox = closestForm.querySelector("input[name=agreement]")
-    if (hasInvalidInputs(Array.from(closestForm.querySelectorAll(".form__input"))) || !agreementCheckbox.checked) {
-      deactivateSubmitButton(closestForm)
+    const agreementCheckbox = closestForm.querySelector(
+      "input[name=agreement]"
+    );
+    if (
+      hasInvalidInputs(
+        Array.from(closestForm.querySelectorAll(".form__input"))
+      ) ||
+      !agreementCheckbox.checked
+    ) {
+      deactivateSubmitButton(closestForm);
     } else {
-      activateSubmitButton(closestForm)
+      activateSubmitButton(closestForm);
     }
-  })
-})
+  });
+});
 smallMenuLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    unlockScroll()
+    unlockScroll();
     smallMenuOverlay.classList.remove("nav-menu-small__overlay_active");
     smallNavMenu.classList.remove("nav-menu-small_active");
-  })
-})
+  });
+});
 
-maskPhone('input[name="number"]')
-
-
+maskPhone('input[name="number"]');

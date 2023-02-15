@@ -1,4 +1,4 @@
-export default function maskPhone(selector, masked = '+7 (___) ___-__-__') {
+export default function maskPhone(selector, masked = "+7 (___) ___-__-__") {
   const elems = document.querySelectorAll(selector);
 
   function mask(event) {
@@ -14,18 +14,23 @@ export default function maskPhone(selector, masked = '+7 (___) ___-__-__') {
     if (i !== -1) {
       newValue = newValue.slice(0, i);
     }
-    let reg = template.substr(0, this.value.length).replace(/_+/g,
-      function (a) {
+    let reg = template
+      .substr(0, this.value.length)
+      .replace(/_+/g, function (a) {
         return "\\d{1," + a.length + "}";
-      }).replace(/[+()]/g, "\\$&");
+      })
+      .replace(/[+()]/g, "\\$&");
     reg = new RegExp("^" + reg + "$");
-    if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) {
+    if (
+      !reg.test(this.value) ||
+      this.value.length < 5 ||
+      (keyCode > 47 && keyCode < 58)
+    ) {
       this.value = newValue;
     }
     if (event.type === "blur" && this.value.length < 5) {
       this.value = "";
     }
-
   }
 
   for (const elem of elems) {
@@ -33,5 +38,4 @@ export default function maskPhone(selector, masked = '+7 (___) ___-__-__') {
     elem.addEventListener("focus", mask);
     elem.addEventListener("blur", mask);
   }
-
 }
