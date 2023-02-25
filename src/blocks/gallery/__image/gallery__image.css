@@ -9,3 +9,15 @@
 .gallery__image:hover {
   transform: scale(1.2)
 }
+
+@media (max-width: 768px) {
+  .gallery__image {
+    transition: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery__image:hover {
+    transform: none;
+  }
+}

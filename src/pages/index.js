@@ -17,7 +17,6 @@ import {
   sliderWrapper,
   nextSlide,
   prevSlide,
-  slideWidth,
   buttonConfirmation,
   popupConfirmSentForm,
   subtitleSendFormConfirmation,
@@ -25,6 +24,7 @@ import {
   agreementCheckboxes,
   smallMenuLinks,
   slidesNumber,
+  root,
 } from "../components/variables";
 import {
   closePopup,
@@ -40,7 +40,7 @@ import {
   toggleButtonSendingData,
 } from "../components/validation";
 import maskPhone from "../components/mask";
-import { unlockScroll } from "../components/utils";
+import {unlockScroll} from "../components/utils";
 
 export const settings = {
   formElement: ".form",
@@ -50,6 +50,10 @@ export const settings = {
   inputErrorClass: "form__input_type_error",
   errorClass: ".form__input-error",
 };
+
+export let scrollWidth = window.innerWidth - root.offsetWidth + "px";
+let slideWidthCounter = 0;
+let slideWidth = document.querySelector(".our-production__slider-image").offsetWidth;
 
 //Слушатель на бургер меню
 burgerMenuButton.addEventListener("click", openSmallMenu);
@@ -96,7 +100,6 @@ galleryPhotoElements.forEach((element) => {
 });
 
 // Слайдер
-let slideWidthCounter = 0;
 nextSlide.addEventListener("click", () => {
   nextSlide.disabled = true;
   slideWidthCounter += slideWidth;
@@ -134,7 +137,7 @@ forms.forEach((form) => {
     evt.preventDefault();
     toggleButtonSendingData(false, evt);
     const formData = new FormData(form);
-    fetch("sendmail.php", { method: "POST", body: formData })
+    fetch("sendmail.php", {method: "POST", body: formData})
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -143,15 +146,18 @@ forms.forEach((form) => {
         }
       })
       .then((response) => {
-        openPopup(popupConfirmSentForm);
         subtitleSendFormConfirmation.textContent = response.message;
+        closePopup(popupWithForm)
       })
       .catch((error) => {
         subtitleSendFormConfirmation.textContent = error.message;
+        closePopup(popupWithForm)
       })
       .finally(() => {
         toggleButtonSendingData(true, evt);
-        closePopup(popupWithForm);
+        setTimeout(() => {
+          openPopup(popupConfirmSentForm);
+        }, 200)
       });
     form.reset();
     deactivateSubmitButton(form);
@@ -185,5 +191,12 @@ smallMenuLinks.forEach((link) => {
     smallNavMenu.classList.remove("nav-menu-small_active");
   });
 });
+
+screen.orientation.addEventListener('change', () => {
+  scrollWidth = window.innerWidth - root.offsetWidth + "px";
+  slideWidth = document.querySelector(".our-production__slider-image").offsetWidth;
+  sliderWrapper.style.transform = `translateX(0)`;
+  slideWidthCounter = 0;
+})
 
 maskPhone('input[name="number"]');

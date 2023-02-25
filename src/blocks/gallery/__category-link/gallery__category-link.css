@@ -1,15 +1,13 @@
 .gallery__category-link {
-  display: flex;
-  align-items: center;
-  align-self: center;
-  height: 30px;
-  margin: 0.5em 1ex 0.2em;
-  padding: 5px 30px;
+  color: white;
+  padding: 10px 30px;
+  font-size: 22px;
   line-height: 1;
   border-radius: 22px;
-  background: #DE7900;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
+  display: block;
+  background: #DE7900;
 }
 
 .gallery__category-link:hover {
@@ -18,12 +16,21 @@
 
 @media (max-width: 899px) {
   .gallery__category-link {
-    padding: 1px 25px;
+    padding: 10px 25px;
+    font-size: 19px;
   }
 }
 
 @media (max-width: 599px) {
   .gallery__category-link {
-    padding: 0 15px;
+    padding: 5px 15px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 471px) {
+  .gallery__category-link {
+    margin: auto;
+    width: 100%;
   }
 }

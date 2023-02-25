@@ -32,9 +32,7 @@ const prevSlide = document.querySelector(
   ".our-production__slider-button_type_prev"
 );
 const sliderWrapper = document.querySelector(".our-production__slider-wrapper");
-const slideWidth = document.querySelector(
-  ".our-production__slider-wrapper"
-).offsetWidth;
+
 const slidesNumber = document.querySelector(
   ".our-production__slider-wrapper"
 ).childElementCount;
@@ -52,7 +50,6 @@ const agreementCheckboxes = Array.from(
   document.querySelectorAll("input[name=agreement]")
 );
 const root = document.querySelector(".root");
-const scrollWidth = window.innerWidth - root.offsetWidth + "px";
 const smallMenuLinks = Array.from(
   document.querySelectorAll(".nav-menu-small__item-link")
 );
@@ -79,13 +76,11 @@ export {
   nextSlide,
   prevSlide,
   sliderWrapper,
-  slideWidth,
   buttonConfirmation,
   popupConfirmSentForm,
   subtitleSendFormConfirmation,
   agreementCheckboxes,
   root,
-  scrollWidth,
   forms,
   smallMenuLinks,
   formOpenedPopup,

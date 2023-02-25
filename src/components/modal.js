@@ -6,8 +6,8 @@ import {
   smallNavMenu,
   popupOpenedImage,
 } from "./variables";
-import { lockScroll, unlockScroll } from "./utils";
-import { checkInputs } from "./validation";
+import {lockScroll, unlockScroll} from "./utils";
+import {checkInputs} from "./validation";
 
 buttonsClosePopup.forEach((button) => {
   button.addEventListener("click", () => {
@@ -46,22 +46,42 @@ const closeByEscape = (evt) => {
   }
 };
 
-const openPopup = (popup) => {
-  checkInputs();
-  popup.classList.add("popup_opened");
-  lockScroll();
-  window.addEventListener("keydown", closeByEscape);
-};
-
-const closePopup = (popup) => {
-  popup.classList.remove("popup_opened");
-  unlockScroll();
-  window.removeEventListener("keydown", closeByEscape);
-  formOpenedPopup.reset();
-  if (popup.classList.contains("popup_type_image")) {
-    popupOpenedImage.src = "";
-    popupOpenedImage.alt = "";
+const closeByEnter = (evt) => {
+  if (evt.key === "Enter") {
+    document.querySelector('.popup__button-confirmation').click()
   }
 };
 
-export { openPopup, closePopup, openSmallMenu, closeSmallMenu };
+const openPopup = (popup) => {
+  if (popup.classList.contains('popup_type_form')) {
+    checkInputs();
+  }
+  if (popup.classList.contains('popup_type_send-form-confirmation')) {
+    window.addEventListener('keydown', closeByEnter)
+  }
+  popup.classList.add("popup_opened");
+  lockScroll();
+  window.addEventListener('keydown', closeByEscape);
+};
+
+const closePopup = (popup) => {
+  if (!popup.classList.contains('popup_type_form')) {
+    formOpenedPopup.reset();
+  }
+  if (popup.classList.contains("popup_type_image")) {
+    setTimeout(() => {
+      popupOpenedImage.src = "";
+      popupOpenedImage.alt = "";
+    }, 200)
+  }
+  popup.classList.remove("popup_opened");
+  unlockScroll();
+  window.removeEventListener("keydown", closeByEscape);
+  if (popup.classList.contains('popup_type_send-form-confirmation')) {
+    window.removeEventListener('keydown', closeByEnter)
+    unlockScroll();
+    window.removeEventListener("keydown", closeByEscape);
+  }
+};
+
+export {openPopup, closePopup, openSmallMenu, closeSmallMenu};

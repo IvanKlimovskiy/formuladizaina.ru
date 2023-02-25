@@ -1,4 +1,6 @@
-import {messenger, root, scrollWidth} from "./variables";
+import {messenger, root} from "./variables";
+import {scrollWidth} from "../pages";
+
 
 export const lockScroll = () => {
   root.classList.add("root_scroll_disabled")
