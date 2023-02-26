@@ -12,6 +12,13 @@
   }
 }
 
+@media (max-width: 599px) {
+  .cards__card-image {
+    height: 100%;
+    margin: 0 auto ;
+  }
+}
+
 @media (max-width: 479px) {
   .cards__card-image {
     margin: 0 auto;

@@ -82,12 +82,10 @@
 @import "../blocks/contract/contract.css";
 @import "../blocks/contract/__item/contract__item.css";
 @import "../blocks/contract/__title/_type/contract__title_type_span.css";
-@import "../blocks/working/working.css";
-@import "../blocks/working/__article-title/working__article-title.css";
-@import "../blocks/working/__title/working__title.css";
-@import "../blocks/working/__article-subtitle/working__article-subtitle.css";
-@import "../blocks/working/__article-text/working__article-text.css";
-@import "../blocks/working/__title-wrapper/working__title-wrapper.css";
+@import "../blocks/information/information.css";
+@import "../blocks/information/__grid/information__grid.css";
+@import "../blocks/information/__image/information__image.css";
+@import "../blocks/information/__title/information__title.css";
 @import "../blocks/our-production/our-production.css";
 @import "../blocks/our-production/__title/our-production__title.css";
 @import "../blocks/our-production/__subtitle/our-production__subtitle.css";
@@ -102,6 +100,7 @@
 @import "../blocks/cooperation/__title/cooperation__title.css";
 @import "../blocks/cooperation/__labels/cooperation__labels.css";
 @import "../blocks/cooperation/__label/cooperation__label.css";
+@import "../blocks/cooperation/__label/_type/cooperation__label_type_kesseboehmer.css";
 @import "../blocks/questions/questions.css";
 @import "../blocks/questions/__info/questions__info.css";
 @import "../blocks/info/info.css";

@@ -20,13 +20,13 @@
   },
   "homepage": "https://github.com/IvanKlimovskiy/formula-dizaina#readme",
   "devDependencies": {
-    "@babel/core": "^7.20.12",
+    "@babel/core": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^9.1.2",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.3",
-    "cssnano": "^5.1.14",
+    "cssnano": "^5.1.15",
     "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.2",
@@ -36,7 +36,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "core-js": "^3.27.2",
+    "core-js": "^3.28.0",
     "imask": "^6.4.3"
   }
 }
