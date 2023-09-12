@@ -7,6 +7,8 @@ import {
   buttonsOpenForm,
   popupWithForm,
   popupTitle,
+  popupTinkoff,
+  buttonOpenTinkoff,
   messengerLinks,
   chatLinks,
   overlay,
@@ -25,6 +27,7 @@ import {
   smallMenuLinks,
   slidesNumber,
   root,
+  buttonToUp
 } from "../components/variables";
 import {
   closePopup,
@@ -71,7 +74,9 @@ buttonsOpenForm.forEach((button) => {
     openPopup(popupWithForm);
   });
 });
-
+buttonOpenTinkoff.addEventListener('click', function () {
+  openPopup(popupTinkoff)
+})
 // Слушатели для иконки мессенджера и оверлея
 messengerLinks.forEach((messengerLink) => {
   messengerLink.addEventListener("click", () => {
@@ -198,5 +203,25 @@ screen.orientation.addEventListener('change', () => {
   sliderWrapper.style.transform = `translateX(0)`;
   slideWidthCounter = 0;
 })
+
+// Функция, которая добавляет стиль для кнопки при прокрутке
+function scrollScreenToTop(scrollDistance) {
+  if (window.scrollY >= scrollDistance) {
+    buttonToUp.style.display = 'flex'
+  } else {
+    buttonToUp.style.display = 'none'
+  }
+}
+window.addEventListener('scroll', function () {
+  const scrollDistance = 2000;
+  scrollScreenToTop(scrollDistance);
+});
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+buttonToUp.addEventListener('click', scrollToTop)
 
 maskPhone('input[name="number"]');

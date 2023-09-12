@@ -4,9 +4,14 @@ const smallNavMenu = document.querySelector(".nav-menu-small");
 const buttonCloseSmallNavMenu = document.querySelector(
   ".nav-menu-small__close-button"
 );
+const buttonToUp = document.querySelector('.button-to-top');
+
+const tinkoffBanner = document.querySelector('.tinkoff-banner');
+const buttonOpenTinkoff = document.querySelector('.tinkoff-banner__button');
 const popupWithImage = document.querySelector(".popup_type_image");
 const popupOpenedImage = document.querySelector(".popup__image");
 const popupWithForm = document.querySelector(".popup_type_form");
+const popupTinkoff = document.querySelector('.popup_type_tinkoff-banner');
 const buttonsOpenForm = Array.from(
   document.querySelectorAll(".button_type_popup")
 );
@@ -85,4 +90,8 @@ export {
   smallMenuLinks,
   formOpenedPopup,
   slidesNumber,
+  buttonOpenTinkoff,
+  popupTinkoff,
+  tinkoffBanner,
+  buttonToUp
 };

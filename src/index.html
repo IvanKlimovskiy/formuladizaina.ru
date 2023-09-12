@@ -34,6 +34,13 @@
 
 <body class="root">
   <header class="header">
+    <div class="tinkoff-banner">
+      <img class="tinkoff-banner__logo" src="<%=require('./images/tinklogo.svg')%>" alt="Логотип Тинькофф">
+      <div class="tinkoff-banner__wrapper">
+        <p class="tinkoff-banner__text">Рассрочка за 2 минуты, не выходя из дома</p>
+        <button class="tinkoff-banner__button">Узнать подробнее</button>
+      </div>
+    </div>
     <nav class="nav-menu">
       <div class="nav-menu__logo-wrapper">
         <img class="nav-menu__logo" src="<%=require('./images/logo.png')%>" alt="Логотип">
@@ -295,7 +302,7 @@
           <ul class="designer__list">
             <li class="designer__item contract__item"><b style="color:#c48408">1&nbsp;</b>Кассовый чек.</li>
             <li class="designer__item contract__item"><b style="color:#c48408">2&nbsp;</b>Возможность оплатить покупку
-              дебетовой или кредитной картой VISA, MasterCard, МИР.
+              дебетовой или кредитной картой VISA, MasterCard, МИР, а также в рассрочку.
             </li>
             <li class="designer__item contract__item"><b style="color:#c48408">3&nbsp;</b>Уверенность в том, что все
               условия договора с нашей стороны будут выполнены.
@@ -556,6 +563,38 @@
       </div>
     </div>
   </div>
+  <div class="popup popup_type_tinkoff-banner">
+    <div class="popup__wrapper popup__wrapper_type_tinkoff-banner">
+      <div style="display:flex; flex-direction: column; align-items: start" class="popup__content">
+        <button type="button" aria-label="Закрыть" class="popup__close-button popup__close-button_type_tinkoff-banner popup__close-button_type_opened-popup"></button>
+        <img class="tinkoff-banner__logo tinkoff-banner__logo_type_popup" src="<%=require('./images/tinklogowh.svg')%>" alt="Логотип Тинькофф">
+        <h5 class="popup__title popup__title_type_tinkoff-banner">Оформите рассрочку на выгодных условиях</h5>
+        <p class="popup__subtitle popup__subtitle_type_tinkoff-banner">
+          Выберите способ оплаты «в кредит», заполните простую форму, дождитесь одобрения от банка, подпишите договор так, как вам удобно
+        </p>
+        <div class="popup__tinkoff-icons-wrapper">
+          <div class="popup__tinkoff-icon-wrapper">
+            <div class="popup__tinkoff-icon-top">
+              <img class="popup__tinkoff-icon" src="<%=require('./images/check.svg')%>" alt="">
+            </div>
+            <div class="popup__tinkoff-icon-bottom">Одобрение за 1-2 минуты</div>
+          </div>
+          <div class="popup__tinkoff-icon-wrapper">
+            <div class="popup__tinkoff-icon-top">
+              <img class="popup__tinkoff-icon" src="<%=require('./images/stopwatch.svg')%>" alt="">
+            </div>
+            <div class="popup__tinkoff-icon-bottom">Срок кредита от 3 до 36 месяцев</div>
+          </div>
+          <div style="margin-right: 0" class="popup__tinkoff-icon-wrapper">
+            <div class="popup__tinkoff-icon-top">
+              <img class="popup__tinkoff-icon" src="<%=require('./images/passport.svg')%>" alt="">
+            </div>
+            <div class="popup__tinkoff-icon-bottom">Достаточно только паспорта</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <nav class="nav-menu-small">
     <button aria-label="Закрыть" type="button" class="nav-menu-small__close-button"></button>
     <div class="nav-menu-small__content">
@@ -589,6 +628,10 @@
           class="messenger__icon messenger__icon_type_call">Позвонить</a>
     </div>
     <button aria-label="Мессенджеры" type="button" class="messenger__button"></button>
+  </div>
+  <div class="button-to-top">
+    <button aria-label="Мессенджеры" type="button" class="button-to-top__button"></button>
+    <span class="button-to-top__text">Наверх</span>
   </div>
 </body>
 

@@ -1,5 +1,11 @@
 @import "../vendor/fonts.css";
 @import "../blocks/button/button.css";
+@import '../blocks/tinkoff-banner/tinkoff-banner.css';
+@import "../blocks/tinkoff-banner/__logo/tinkoff-banner__logo.css";
+@import "../blocks/tinkoff-banner/__logo/_type/tinkoff-banner__logo_type_popup.css";
+@import '../blocks/tinkoff-banner/__button/tinkoff-banner__button.css';
+@import '../blocks/tinkoff-banner/__wrapper/tinkoff-banner__wrapper.css';
+@import '../blocks/tinkoff-banner/__text/tinkoff-banner__text.css';
 @import "../blocks/header/header.css";
 @import "../blocks/header/__overlay/header__overlay.css";
 @import "../blocks/root/root.css";
@@ -140,6 +146,16 @@
 @import "../blocks/popup/__subtitle/popup__subtitle.css";
 @import "../blocks/popup/__content/popup__content.css";
 @import "../blocks/popup/__submit-button/popup__submit-button.css";
+@import "../blocks/popup/__wrapper/_type/popup__wrapper_type_tinkoff-banner.css";
+@import "../blocks/popup/__title/_type/popup__title_type_tinkoff-banner.css";
+@import "../blocks/popup/__subtitle/_type/popup__subtitle_type_tinkoff-banner.css";
+@import "../blocks/popup/_type/popup_type_tinkoff-banner.css";
+@import "../blocks/popup/__tinkoff-icon/popup__tinkoff-icon.css";
+@import "../blocks/popup/__tinkoff-icon-bottom/popup__tinkoff-icon-bottom.css";
+@import "../blocks/popup/__tinkoff-icon-top/popup__tinkoff-icon-top.css";
+@import "../blocks/popup/__tinkoff-icon-wrapper/popup__tinkoff-icon-wrapper.css";
+@import "../blocks/popup/__tinkoff-icons-wrapper/popup__tinkoff-icons-wrapper.css";
+@import "../blocks/popup/__close-button/_type/popup__close-button_type_tinkoff-banner.css";
 @import "../blocks/nav-menu-small/__close-button/nav-menu-small__close-button.css";
 @import "../blocks/nav-menu-small/__overlay/nav-menu-small__overlay.css";
 @import "../blocks/nav-menu-small/_active/nav-menu-small_active.css";
@@ -154,6 +170,9 @@
 @import "../blocks/messenger/__link/_type/messenger__link_type_whatsapp.css";
 @import "../blocks/messenger/__links/messenger__links.css";
 @import "../blocks/messenger/__links/_active/messenger__links_active.css";
+@import "../blocks/button-to-top/button-to-top.css";
+@import "../blocks/button-to-top/__button/button-to-top__button.css";
+@import "../blocks/button-to-top/__text/button-to-top__text.css";
 @import "../blocks/root/_scroll/root_scroll_disabled.css";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   background: transparent;
