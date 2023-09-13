@@ -6,6 +6,7 @@
 @import '../blocks/tinkoff-banner/__button/tinkoff-banner__button.css';
 @import '../blocks/tinkoff-banner/__wrapper/tinkoff-banner__wrapper.css';
 @import '../blocks/tinkoff-banner/__text/tinkoff-banner__text.css';
+@import "../blocks/tinkoff-banner/__close-button/tinkoff-banner__close-button.css";
 @import "../blocks/header/header.css";
 @import "../blocks/header/__overlay/header__overlay.css";
 @import "../blocks/root/root.css";
@@ -174,6 +175,7 @@
 @import "../blocks/button-to-top/__button/button-to-top__button.css";
 @import "../blocks/button-to-top/__text/button-to-top__text.css";
 @import "../blocks/root/_scroll/root_scroll_disabled.css";
+@import "../blocks/tinkoff-banner/__close-button/tinkoff-banner__close-button.css";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   background: transparent;
   border: 0;

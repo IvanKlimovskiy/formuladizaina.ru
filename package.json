@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "core-js": "^3.28.0",
-    "imask": "^6.4.3"
+    "imask": "^6.4.3",
+    "prettier": "^3.0.3"
   }
 }

@@ -35,6 +35,7 @@
 <body class="root">
   <header class="header">
     <div class="tinkoff-banner">
+      <button type="button" aria-label="Закрыть" class="tinkoff-banner__close-button"></button>
       <img class="tinkoff-banner__logo" src="<%=require('./images/tinklogo.svg')%>" alt="Логотип Тинькофф">
       <div class="tinkoff-banner__wrapper">
         <p class="tinkoff-banner__text">Рассрочка за 2 минуты, не выходя из дома</p>
@@ -110,7 +111,7 @@
             <li class="designer__item">Подберем оптимальное наполнение</li>
             <li class="designer__item" style="color: white">Вам не нужно никуда ходить</li>
           </ul>
-          <form method="post" class="form designer__formq">
+          <form method="post" class="form designer__form">
             <label class="form__label" for="name">
               <input name="name" class="form__input" id="name" type="text" placeholder="Ваше имя" required minlength="2"
                 maxlength="40" pattern="^[А-Яа-яЁё\s\-]+$"

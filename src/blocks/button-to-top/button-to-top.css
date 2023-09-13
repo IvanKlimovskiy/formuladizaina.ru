@@ -18,9 +18,13 @@
 
 @media (max-width: 1024px) {
   .button-to-top {
-    padding: 0 25px 0;
+    padding: 0;
     max-height: 93px;
+    left: 35px;
     bottom: 35px
+  }
+  .button-to-top:hover {
+    background-color: rgba(0, 0, 0, 0);
   }
 }
 @media (max-width: 765px) {
